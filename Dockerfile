@@ -14,4 +14,5 @@ WORKDIR /home
 
 VOLUME /home
 
-ENTRYPOINT gox -output=$OUTPUT -osarch="$OSARCH" $PACKAGE
+ENTRYPOINT gox -output=$OUTPUT -osarch="$OSARCH" -ldflags "$LDFLAGS" $PACKAGE
+

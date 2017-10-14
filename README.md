@@ -26,3 +26,5 @@ These can be overriden by setting OSARCH and OUTPUT environment variable. E.g.:
 ```
 docker run --rm -v `pwd`:/home -e PACKAGE=code.linksmart.eu/sc/service-catalog -e OSARCH="linux/arm linux/amd64" docker.linksmart.eu/ci/go-builder
 ```
+
+Additionally, ldflags can be passed to the compiler by setting LDFLAGS environment variable.
