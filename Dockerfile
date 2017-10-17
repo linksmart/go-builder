@@ -9,10 +9,11 @@ ENV GOPATH /temp
 RUN go get github.com/mitchellh/gox
 RUN cp /temp/bin/gox /usr/local/go/bin
 
-ENV GOPATH /home
-WORKDIR /home
+RUN adduser -S builder
+USER builder
 
-VOLUME /home
+ENV GOPATH /data
+WORKDIR /data
+VOLUME /data
 
 ENTRYPOINT gox -output=$OUTPUT -osarch="$OSARCH" -ldflags "$LDFLAGS" $PACKAGE
-
