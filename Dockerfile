@@ -16,4 +16,4 @@ ENV GOPATH /data
 WORKDIR /data
 VOLUME /data
 
-ENTRYPOINT gox -output=$OUTPUT -osarch="$OSARCH" -ldflags "$LDFLAGS" $PACKAGE
+ENTRYPOINT gox -tags="netgo -a -v" -output=$OUTPUT -osarch="$OSARCH" -ldflags "$LDFLAGS" $PACKAGE
