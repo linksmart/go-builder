@@ -9,7 +9,7 @@ ENV GOPATH /temp
 RUN go get github.com/mitchellh/gox
 RUN cp /temp/bin/gox /usr/local/go/bin
 
-RUN adduser -u 1000 -S builder
+RUN adduser -u 1001 -S builder
 USER builder
 
 ENV GOPATH /data
