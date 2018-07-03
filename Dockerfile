@@ -1,4 +1,4 @@
-FROM golang:1.8-alpine
+FROM golang:1.10-alpine
 
 ENV OUTPUT bin/{{.Dir}}-{{.OS}}-{{.Arch}}
 ENV OSARCH linux/386 linux/amd64 linux/arm darwin/amd64 windows/386 windows/amd64
