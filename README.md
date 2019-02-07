@@ -15,10 +15,8 @@ git clone https://code.linksmart.eu/scm/sc/service-catalog.git src/code.linksmar
 docker run --rm -v `pwd`:/data -e PACKAGE=code.linksmart.eu/sc/service-catalog docker.linksmart.eu/ci/go-builder
 ```
 By default, the builder uses `bin/{{.Dir}}-{{.OS}}-{{.Arch}}` naming template and cross-compiles for the following os/arch combinations:
-* linux/386 
 * linux/amd64 
 * linux/arm 
-* windows/386
 * windows/amd64
 * darwin/amd64 
 
