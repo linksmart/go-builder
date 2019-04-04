@@ -3,7 +3,7 @@ FROM golang:1.12-alpine
 ENV OUTPUT bin/{{.Dir}}-{{.OS}}-{{.Arch}}
 ENV OSARCH linux/amd64 linux/arm darwin/amd64 windows/amd64
 
-RUN apk update && apk add git
+RUN apk update && apk add git build-base
 
 ENV GOPATH /temp
 RUN go get github.com/mitchellh/gox
